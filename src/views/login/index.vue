@@ -61,7 +61,7 @@ export default {
   methods: {
     login () {
       // 整体表单的校验
-      this.$refs.loginForm.validator(valid => {
+      this.$refs.loginForm.validate(valid => {
         if (valid) {
           // 如果校验成功,进行登录
           this.$http
@@ -77,7 +77,7 @@ export default {
               // 2.保存登录状态
               // 3.保存登录后返回的用户信息,包含token
               // 4.使用sessionStorage来储存 关闭浏览器绘画失效
-              window.sessionStorage.setItem('hm73-toutiao', JSON.stringify(res.data.data))
+              window.sessionStorage.setItem('jiuye04', JSON.stringify(res.data.data))
               this.$router.push('/')
             })
             .catch(() => {
